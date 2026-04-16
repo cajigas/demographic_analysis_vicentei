@@ -10,9 +10,9 @@ filters="-minInd 7 -minMapQ 30 -minQ 20 -setMinDepthInd 1 -remove_bads 1 -C 50 -
 $HOME/Software/ANGSD/angsd/angsd -bam $bamlist -out $population $jobToDo $filters -sites $HOME/Projects/Oophaga_sylvatica/non-CDS_OopSyl_NCBI_genome.ANGSD.Chr1-10_regions
 #	-> Number of sites retained after filtering: 14114916 
 
-$HOME/Software/ANGSD/angsd/misc/realSFS CEI.saf.idx -P 24 -fold 1 > East_nonCDS_SFS.txt
+$HOME/Software/ANGSD/angsd/misc/realSFS East.saf.idx -P 24 -fold 1 > East_nonCDS_SFS.txt
 
-$HOME/Software/ANGSD/angsd/misc/realSFS print CEI.saf.idx 2>/dev/null | cut -f1-2 > extract
+$HOME/Software/ANGSD/angsd/misc/realSFS print East.saf.idx 2>/dev/null | cut -f1-2 > extract
 wc -l extract #14114916 sites
 
 
